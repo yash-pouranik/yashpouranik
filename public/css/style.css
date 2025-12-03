@@ -13,9 +13,9 @@ body {
 }
 
 a {
-    color: #f0db4f;
+    color: #00d170;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 100;
 }
 a:hover {
     text-decoration: underline;
@@ -35,7 +35,7 @@ kbd {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 720px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 20px;
     height: 70px;
@@ -72,21 +72,29 @@ kbd {
 
 /* 3. Main Content (Index Page) */
 .main-index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: calc(100vh - 140px); /* Full height minus nav and footer */
+    display: block; 
     text-align: center;
+    width: 100%;
 }
 .index-header {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     padding: 20px;
+    margin-bottom: 40px; 
 }
 h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-family: "Neuzeit Grotesk Bold", 'Inter', sans-serif;
+    font-size: 50px;        
+    font-weight: 900;       
+    color: #fbfff8;        
+    margin: 0 0 20px 0;    
+    
+    letter-spacing: -0.02em;
+    
+    font-feature-settings: "ss01" 1; 
 }
 .subtitle {
     font-size: 1.125rem;
@@ -105,7 +113,7 @@ h1 {
 
 /* 4. Main Content (About & Projects Pages) */
 .main-content {
-    max-width: 720px;
+    max-width: 1024px;
     margin: 20px auto 60px auto;
     padding: 0 20px;
 }
@@ -131,11 +139,11 @@ p {
 }
 .social-links-page a {
     margin-right: 20px;
-    font-weight: 500;
+    font-weight: 100;
     color: #b3b3b3;
 }
 .social-links-page a:hover {
-    color: #f0db4f;
+    color: #00ff88;
 }
 .project {
     margin-bottom: 30px;
@@ -152,7 +160,7 @@ p {
     height: 70px; /* Match navbar height */
 }
 .footer-content {
-    max-width: 720px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 20px;
     border-top: 1px solid #333;
@@ -251,7 +259,7 @@ p {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
 }
 
@@ -315,12 +323,12 @@ p {
     margin-top: 30px;
 }
 .project-links-detail a {
-    background-color: #f0db4f;
+    background-color: #00ff88;
     color: #111;
     padding: 10px 15px;
     border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 100;
     margin-right: 15px;
 }
 .project-links-detail a:hover {
@@ -337,7 +345,6 @@ p {
     -webkit-background-clip: text !important;
     background-clip: text !important;
     
-    /* This makes the text color itself transparent */
     color: transparent !important;
 }
 
@@ -347,4 +354,239 @@ p {
     -webkit-background-clip: text !important;
     background-clip: text !important;
     color: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .navbar, .main-content, .footer-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links a {
+        margin: 0 8px;
+        font-size: 0.85rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    .nav-command-btn {
+        padding: 4px 8px;
+        font-size: 1rem;
+    }
+}
+
+/* Tech Stack Badges */
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tech-badge {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #00ff88; /* Neon Green */
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: monospace;
+    transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+    border-color: #00ff88;
+    background: #0d2e1f; /* Dark Green tint on hover */
+    transform: translateY(-2px);
+}
+
+
+/* --- Zeno Rocha Style Additions --- */
+
+.home-section {
+    width: 100%;
+    max-width: 1024px;
+    margin: 60px auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #00ff88; /* Your Neon Green Accent */
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Links like "View all projects" */
+.view-all-link {
+    font-size: 0.95rem;
+    color: #eaeaea;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+    transition: all 0.2s ease;
+}
+.view-all-link:hover {
+    color: #00ff88;
+    border-color: #00ff88;
+    text-decoration: none;
+}
+
+/* Services / "What I do" Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.service-item h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-item p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Contact Button */
+.email-btn {
+    display: inline-block;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.email-btn:hover {
+    background: rgba(0, 255, 136, 0.1);
+    text-decoration: none;
+}
+
+
+.achievements-list {
+    border-left: 2px solid #222;
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.achievement-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.achievement-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Dot */
+.achievement-item::before {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #111;
+    border: 2px solid #00ff88; /* Neon Green Border */
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.achievement-item:hover::before {
+    background-color: #00ff88;
+}
+
+.achievement-year {
+    font-size: 0.85rem;
+    color: #666;
+    font-family: monospace;
+    margin-bottom: 5px;
+}
+
+.achievement-content h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.achievement-content p {
+    color: #999;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.achievement-content strong {
+    color: #eaeaea;
+    font-weight: 500;
+}
+
+/* --- Projects Timeline Tweaks --- */
+.achievement-content h4 a:hover {
+    color: #00ff88 !important; /* Title turns Green on Hover */
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .achievement-content p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 430px) {
+    
+    .project-links-detail {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px; 
+        margin-top: 30px;
+    }
+
+    .project-links-detail .email-btn {
+        width: 100%;        
+        text-align: center; 
+        margin-right: 0 !important; 
+        padding: 16px;     
+    }
+
+    
+    .project-links-detail .view-all-link {
+        display: block;    
+        width: 100%;
+        text-align: center;
+        padding: 12px;      
+        border-bottom: none; 
+        color: #000000;
+    }
+    
+    .project-links-detail .view-all-link:hover {
+        color: #fff;
+        background: transparent;
+    }
+
+    .email-btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
 }

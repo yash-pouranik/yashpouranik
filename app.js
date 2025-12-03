@@ -9,56 +9,62 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const projects = [
     {
+        slug: "edubridge",
+        title: "EduBridge Kids",
+        year: "2025 - NOV",  
+        tagline: "Offline-first LMS with AI & Live Classes",
+        stats: "Void Hack 7.0 | MERN, PWA, Gemini AI",
+        desc: "Built for Void Hack 7.0. A comprehensive educational platform designed for low-connectivity regions. Features role-based access, offline-first PWA, and Gemini-powered AI study assistant.",
+        repo: "https://github.com/KushagraJaiswar02/EduPlatform",
+        live: "https://eduplatform.bitbros.in/"
+    },
+    {
         slug: "campusnotes",
         title: "CampusNotes",
+        year: "2025 - SEPT",  
         tagline: "Academic notes sharing platform",
         stats: "750+ Active Users | Node.js, EJS, MongoDB",
-        desc: "Developed a full-stack web application enabling students to share academic notes, achieving over 750 active users and 50+ signups. Engineered a secure, role-based platform with a verification system, integrated a Gemini-powered AI assistant for note summarization, and implemented multi-account Cloudinary uploads using a Round-Robin strategy. Successfully handled high traffic, managing over 2,000 downloads and 25GB+ data delivery monthly.",
+        desc: "Developed a full-stack web application enabling students to share academic notes. Engineered a secure, role-based platform with a verification system and AI assistant.",
         repo: "https://github.com/yash-pouranik/CampusNotes",
         live: "https://campusnotes.bitbros.in/"
     },
     {
-        slug: "gullybazar",
-        title: "GullyBazar",
-        tagline: "Hackathon-built MERN marketplace",
-        stats: "MERN Stack | 100+ Commits",
-        desc: "Created a full-stack marketplace during the 48-hour national 'Solve for India' hackathon (Tutedude) to connect local street food vendors with verified raw material suppliers. Integrated features like supplier reviews, product comparison, cart management, and secure authentication using Passport.js and REST APIs. Achieved over 100 GitHub commits and received positive jury feedback.",
-        repo: "https://github.com/yash-pouranik/gullybaza-bitbros",
-        live: "https://gullybazar.bitbros.in/"
-    },
-    {
         slug: "trekstay",
-        title: "trekStay",
-        tagline: "Full stack stay booking app",
-        stats: "Node.js, EJS, MongoDB",
-        desc: "Designed and built an Airbnb-inspired travel booking application using Node.js, EJS, and MongoDB. Supports dual roles (user/admin) with role-based access control. Implemented full CRUD operations for listings and secure session handling with Passport.js authentication. Deployed on Render using MongoDB Atlas for scalable cloud data storage.",
+        title: "TrekStay",
+        year: "2025 - JUNE",
+        tagline: "Airbnb-inspired stay booking",
+        stats: "Node.js, EJS, MongoDB, Mapbox",
+        desc: "Designed and built a travel booking application with dual roles (user/admin), full CRUD operations, and map integration using Mapbox GL.",
         repo: "https://github.com/yash-pouranik/trekStay",
         live: "https://trekstay.onrender.com/"
     },
     {
-        slug: "rewear",
-        title: "ReWear",
-        tagline: "Clothing swap platform",
-        stats: "Node.js, EJS, MongoDB",
-        desc: "Developed a sustainable fashion platform allowing users to list unused clothing items and engage in swaps. Users can exchange items directly or use a points-based system. Includes features like user dashboards to track uploads and swaps, a notification system for swap requests, and an admin panel for user and item management.",
-        repo: "https://github.com/yash-pouranik/ReWear",
-        live: "/" // "/" usually means not deployed or root path locally
+        slug: "gullybazar",
+        title: "GullyBazar",
+        year: "2024 - JULY",
+        tagline: "Hyperlocal marketplace for vendors",
+        stats: "Solve for India Hackathon | MERN Stack",
+        desc: "Created during a 48-hour hackathon to connect street food vendors with raw material suppliers. Integrated supplier reviews and secure authentication.",
+        repo: "https://github.com/yash-pouranik/gullybaza-bitbros",
+        live: "https://gullybazar.bitbros.in/"
     },
     {
         slug: "nirvirodh",
         title: "Nirvirodh",
-        tagline: "Team collaboration tool with file locking",
-        stats: "Node.js, EJS, MongoDB, Socket.IO",
-        desc: "A secure, team-based collaborative platform designed to prevent editing conflicts by implementing a real-time file locking system using Socket.IO. Users can create/join teams, manage projects, and lock files before editing. Features include notifications for team requests, project status updates, and integration to fetch repository files directly from GitHub.",
+        year: "2025 - AUG",
+        tagline: "Real-time collaboration tool",
+        stats: "Socket.IO, Node.js, MongoDB",
+        desc: "A secure team collaboration platform featuring a real-time file locking system to prevent editing conflicts.",
         repo: "https://github.com/yash-pouranik/nirvirodh",
         live: "https://nirvirodh.onrender.com"
     },
     {
         slug: "pandey-dhudh-bhandar",
-        title: "Pandey Dhudh Bhandar Ledger",
-        tagline: "Udhaar (credit) manager for local milk vendor",
-        stats: "Node.js, EJS, MongoDB",
-        desc: "A practical web application built specifically for a local milk vendor ('Pandey Ji') to digitally manage customer credit ('udhaar'). Allows the owner to add customers, record daily milk credits, and track payments received. Features include calculating total balances, identifying top debtors, and a separate interface for customers to check their own billing history using a unique ID. Currently used by the vendor.",
+        title: "Pandey Ledger",
+        year: "2025 - SEPT",
+        tagline: "Digital credit manager",
+        stats: "Practical Use Case | Node.js, MongoDB",
+        desc: "A custom ledger app for a local milk vendor to digitize customer credit ('udhaar'). Features daily entry logging and balance calculation.",
         repo: "https://github.com/yash-pouranik/PandeyDhudhBhandar",
         live: "https://pandeydudhbhandar.bitbros.in/"
     }
@@ -67,7 +73,9 @@ const projects = [
 
 // Root route
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", { 
+        featuredProjects: projects.slice(0, 2) 
+    });
 });
 
 // About route

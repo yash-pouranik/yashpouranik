@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,21 +23,48 @@
         </button>
     </nav>
 
-    <main class="main-content">
-        <a href="/projects" class="back-link">← All Projects</a>
+<main class="main-content">
+        <a href="/projects" class="back-link">
+            <span style="font-family: 'Inter'; margin-right: 5px;">←</span> Back to Projects
+        </a>
         
-        <div class="project-detail-header">
-            <h1 class="gradient-text-green"><%= project.title %></h1>
-            <p class="subtitle"><%= project.tagline %></p>
-        </div>
-        
-        <div class="project-detail-body">
-            <p><%= project.desc %></p>
-        </div>
+        <div class="project-detail-header" style="margin-top: 40px; margin-bottom: 40px;">
+            <span class="achievement-year" style="color: #00ff88; margin-bottom: 10px; display: block;">
+                <%= project.year || '2024' %>
+            </span>
 
-        <div class="project-links-detail">
-            <a href="<%= project.repo %>" target="_blank">View Repository</a>
-            <a href="<%= project.live %>" target="_blank">Visit Live Site</a>
+            <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 15px;">
+                <%= project.title %>
+            </h1>
+           
+            <p class="subtitle" style="font-size: 1.5rem; color: #888; margin-bottom: 30px; font-weight: 400;">
+                <%= project.tagline %>
+            </p>
+
+            <div class="project-links-detail">
+                <% if (project.live && project.live !== "/" && project.live !== "#") { %>
+                    <a href="<%= project.live %>" target="_blank" class="email-btn" style="margin-right: 15px; margin-top: 0;">
+                        Visit Live Site ↗
+                    </a>
+                <% } %>
+                
+                <a href="<%= project.repo %>" target="_blank" class="view-all-link" style="font-size: 1rem;">
+                    View Source Code
+                </a>
+            </div>
+        </div>
+        
+        <hr style="border-color: #222; margin-bottom: 40px;">
+
+        <div class="project-detail-body" style="font-size: 1.1rem; color: #b3b3b3; line-height: 1.8;">
+            <p><%= project.desc %></p>
+            
+            <div style="margin-top: 40px;">
+                <h4 style="color: #fff; margin-bottom: 15px;">Tech Stack & Stats</h4>
+                <p style="font-family: 'JetBrains Mono', monospace; color: #666;">
+                    <%= project.stats %>
+                </p>
+            </div>
         </div>
 
     </main>
@@ -52,7 +80,7 @@
         <a href="https://linkedin.com/in/yash-pouranik30" target="_blank">LinkedIn</a>
         <a href="https://github.com/yash-pouranik" target="_blank">GitHub</a>
         <a href="mailto:yashpouranik124@gmail.com">Email</a>
-        <a href="https://drive.google.com/file/d/1b2uIeEn2Ct6G1MaRKiYSL2LG1W2mDQX5/view?usp=sharing" target="_blank">Resume</a>
+        <a href="/YASH_RESUME_NOV2025.pdf" target="_blank">Resume</a>
     </footer>
 
     <script src="/js/command.js"></script>

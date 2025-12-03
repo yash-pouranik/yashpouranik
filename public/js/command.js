@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "About", hotkey: "G A", action: () => window.location.href = "/about" },
         { name: "Projects", hotkey: "G P", action: () => window.location.href = "/projects" },
         { name: "Send Email", hotkey: "E", action: () => window.location.href = "mailto:yashpouranik124@gmail.com" },
-        { name: "View Source", hotkey: "S", action: () => window.location.href = "YOUR_GITHUB_PORTFOLIO_REPO_LINK" },
+        { name: "View Source", hotkey: "S", action: () => window.location.href = "https://github.com/yash-pouranik/portfolio" },
         { name: "Copy Link", hotkey: "L", action: () => navigator.clipboard.writeText(window.location.href) },
     ];
 

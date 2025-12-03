@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -22,27 +23,35 @@
         </button>
     </nav>
 
-    <main class="main-content">
+<main class="main-content">
         <section class="project-page-header">
-            <h2 class="gradient-text-green">Work. Hobby. Open Source.</h2>
-            <p>
-                I'm obsessed with side projects and building in public. 
-                Here are some of the websites and apps I've built.
-            </p>
+            <h2 class="gradient-text-green">Building Since 2025 - JUNE.</h2>
+            
         </section>
 
         <section>
-            <h3>Featured Projects</h3>
-            <div class="project-grid">
+            <div class="achievements-list" style="margin-top: 40px;">
                 
                 <% projects.forEach(project => { %>
-                    <a href="/projects/<%= project.slug %>" class="project-card">
-                        <div class="project-card-title">
-                            <%= project.title %>
+                    <div class="achievement-item">
+                        <div class="achievement-year" style="color: #666;">
+                            <%= project.year %>
                         </div>
-                        <p class="project-card-tagline"><%= project.tagline %></p>
-                        <p class="project-card-stats"><%= project.stats %></p>
-                    </a>
+
+                        <div class="achievement-content">
+                            <h4>
+                                <a href="/projects/<%= project.slug %>" style="color: #fff; text-decoration: none;">
+                                    <%= project.title %>
+                                </a>
+                            </h4>
+                            
+                            <p style="margin-bottom: 10px;"><%= project.desc %></p>
+                            
+                            <span class="tech-badge" style="font-size: 0.75rem; padding: 4px 8px; color: #888; border-color: #333;">
+                                <%= project.tagline %>
+                            </span>
+                        </div>
+                    </div>
                 <% }) %>
 
             </div>
@@ -60,7 +69,7 @@
         <a href="https://linkedin.com/in/yash-pouranik30" target="_blank">LinkedIn</a>
         <a href="https://github.com/yash-pouranik" target="_blank">GitHub</a>
         <a href="mailto:yashpouranik124@gmail.com">Email</a>
-        <a href="https://drive.google.com/file/d/1b2uIeEn2Ct6G1MaRKiYSL2LG1W2mDQX5/view?usp=sharing" target="_blank">Resume</a>
+        <a href="/YASH_RESUME_NOV2025.pdf" target="_blank">Resume</a>
     </footer>
 
     <script src="/js/command.js"></script>

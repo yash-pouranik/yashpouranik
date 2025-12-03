@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?v=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,7 +27,7 @@
         <header class="index-header">
             <h1>Yash Pouranik</h1>
             <p class="subtitle">
-                MERN Developer & TA @ Apna College.
+                Full Stack Developer | CSE'27
             </p>
             <p class="subtitle-light">
                 Obsessed with developer experience.
@@ -36,6 +37,80 @@
                 Press <kbd>ctrl</kbd> <kbd>K</kbd> to start →
             </div>
         </header>
+
+        <section class="home-section">
+        <h3 class="section-title">Selected Work</h3>
+        <div class="project-grid">
+            <% featuredProjects.forEach(project => { %>
+                <a href="/projects/<%= project.slug %>" class="project-card">
+                    <div class="project-card-title"><%= project.title %></div>
+                    <p class="project-card-tagline"><%= project.tagline %></p>
+                    <p class="project-card-stats"><%= project.stats %></p>
+                </a>
+            <% }) %>
+        </div>
+        <div style="margin-top: 20px; text-align: left;">
+            <a href="/projects" class="view-all-link">View all projects →</a>
+        </div>
+    </section>
+
+    <section class="home-section">
+        <h3 class="section-title">I can help you with</h3>
+        <div class="services-grid">
+            <div class="service-item">
+                <h4>01. Web Development</h4>
+                <p>Building fast, SEO-friendly, and scalable web apps using the MERN stack.</p>
+            </div>
+            <div class="service-item">
+                <h4>02. Backend Engineering</h4>
+                <p>Robust APIs, database management (MongoDB/SQL), and secure authentication.</p>
+            </div>
+            <div class="service-item">
+                <h4>03. Mentorship</h4>
+                <p>Guiding students and peers in debugging, code structure, and best practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section">
+            <h3 class="section-title">Timeline</h3>
+            <div class="achievements-list">
+                
+                <div class="achievement-item">
+                    <div class="achievement-year">2025 - Nov</div>
+                    <div class="achievement-content">
+                        <h4>Void Hack 7.0</h4>
+                        <p>Built <strong>EduBridge Kids</strong>, an offline-first LMS to help rural students learn without internet.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-year">2025 - July</div>
+                    <div class="achievement-content">
+                        <h4>MERN TA Intern</h4>
+                        <p>Selected as a Teaching Assistant at <strong>Apna College</strong>. Mentored 200+ students in Full Stack Development.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-year">2025 - July</div>
+                    <div class="achievement-content">
+                        <h4>Solve for India Hackathon</h4>
+                        <p>Built <strong>GullyBazar</strong>, a hyperlocal marketplace connecting street vendors with suppliers.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    <section class="home-section" style="margin-bottom: 60px;">
+        <h3 class="section-title">Get in Touch</h3>
+        <p style="color: #b3b3b3; margin-bottom: 20px; max-width: 500px;">
+            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        </p>
+        <a href="mailto:yashpouranik124@gmail.com" class="email-btn">Say Hello</a>
+    </section>
+
     </main>
 
     <div class="command-palette-overlay" id="command-palette-overlay">
@@ -45,12 +120,15 @@
                 </ul>
         </div>
     </div>
+
+    
+
     
     <footer class="footer-content">
         <a href="https://linkedin.com/in/yash-pouranik30" target="_blank">LinkedIn</a>
         <a href="https://github.com/yash-pouranik" target="_blank">GitHub</a>
         <a href="mailto:yashpouranik124@gmail.com">Email</a>
-        <a href="https://drive.google.com/file/d/1b2uIeEn2Ct6G1MaRKiYSL2LG1W2mDQX5/view?usp=sharing" target="_blank">Resume</a>
+        <a href="/YASH_RESUME_NOV2025.pdf" target="_blank">Resume</a>
     </footer>
 
     <script src="/js/command.js"></script>
