@@ -9,12 +9,22 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const projects = [
     {
+        slug: "urbackend",
+        title: "urBackend",
+        year: "2025 - DEC",
+        tagline: "Instant Backend-as-a-Service (BaaS)",
+        stats: "Node.js, MongoDB, JWT, REST APIs",
+        desc: "urBackend is an instant Backend-as-a-Service platform built to help developers quickly set up databases, authentication, and storage without writing backend code. It provides JWT-based authentication, API key access, rate limiting for security, schema validation for data consistency, and a visual dashboard to monitor API usage and traffic.",
+        repo: "https://github.com/yash-pouranik/urBackend",
+        live: "https://urbackend.bitbros.in/"
+    },
+    {
         slug: "edubridge",
         title: "EduBridge Kids",
         year: "2025 - NOV",  
         tagline: "Offline-first LMS with AI & Live Classes",
         stats: "Void Hack 7.0 | MERN, PWA, Gemini AI",
-        desc: "Built for Void Hack 7.0. A comprehensive educational platform designed for low-connectivity regions. Features role-based access, offline-first PWA, and Gemini-powered AI study assistant.",
+        desc: "Built for Void Hack 7.0, EduBridge Kids is an offline-first learning management system designed for students in low-connectivity regions. It supports role-based access for students and teachers, progressive web app (PWA) capabilities for offline usage, and a Gemini-powered AI study assistant to help with learning and doubt resolution.",
         repo: "https://github.com/KushagraJaiswar02/EduPlatform",
         live: "https://eduplatform.bitbros.in/"
     },
@@ -24,7 +34,7 @@ const projects = [
         year: "2025 - SEPT",  
         tagline: "Academic notes sharing platform",
         stats: "750+ Active Users | Node.js, EJS, MongoDB",
-        desc: "Developed a full-stack web application enabling students to share academic notes. Engineered a secure, role-based platform with a verification system and AI assistant.",
+        desc: "CampusNotes is a production-deployed academic notes sharing platform that allows students to upload, verify, and download study materials. It features secure session-based authentication, role-based access control, and an AI assistant for note summarization and contextual chat, while handling real-world traffic and file delivery at scale.",
         repo: "https://github.com/yash-pouranik/CampusNotes",
         live: "https://campusnotes.bitbros.in/"
     },
@@ -34,7 +44,7 @@ const projects = [
         year: "2025 - JUNE",
         tagline: "Airbnb-inspired stay booking",
         stats: "Node.js, EJS, MongoDB, Mapbox",
-        desc: "Designed and built a travel booking application with dual roles (user/admin), full CRUD operations, and map integration using Mapbox GL.",
+        desc: "TrekStay is a full-stack stay booking platform inspired by Airbnb, supporting user and admin roles. Users can explore listings, make bookings, and leave reviews, while admins manage listings and users. The application integrates Mapbox GL for location-based visualization and follows a clean MVC backend architecture.",
         repo: "https://github.com/yash-pouranik/trekStay",
         live: "https://trekstay.onrender.com/"
     },
@@ -44,7 +54,7 @@ const projects = [
         year: "2024 - JULY",
         tagline: "Hyperlocal marketplace for vendors",
         stats: "Solve for India Hackathon | MERN Stack",
-        desc: "Created during a 48-hour hackathon to connect street food vendors with raw material suppliers. Integrated supplier reviews and secure authentication.",
+        desc: "Built during a 48-hour national hackathon (Solve for India), GullyBazar is a hyperlocal marketplace that connects street food vendors with raw material suppliers. The platform includes secure authentication, vendor and supplier profiles, and a review system to build trust within the local ecosystem.",
         repo: "https://github.com/yash-pouranik/gullybaza-bitbros",
         live: "https://gullybazar.bitbros.in/"
     },
@@ -54,7 +64,7 @@ const projects = [
         year: "2025 - AUG",
         tagline: "Real-time collaboration tool",
         stats: "Socket.IO, Node.js, MongoDB",
-        desc: "A secure team collaboration platform featuring a real-time file locking system to prevent editing conflicts.",
+        desc: "Nirvirodh is a real-time collaboration platform designed to prevent editing conflicts in team environments. It implements a secure file-locking mechanism using Socket.IO, ensuring that only one user can edit a resource at a time while keeping all collaborators in sync.",
         repo: "https://github.com/yash-pouranik/nirvirodh",
         live: "https://nirvirodh.onrender.com"
     },
@@ -64,11 +74,12 @@ const projects = [
         year: "2025 - SEPT",
         tagline: "Digital credit manager",
         stats: "Practical Use Case | Node.js, MongoDB",
-        desc: "A custom ledger app for a local milk vendor to digitize customer credit ('udhaar'). Features daily entry logging and balance calculation.",
+        desc: "Pandey Ledger is a custom-built digital ledger application for a local milk vendor to manage customer credit (udhaar). It supports daily transaction logging, automatic balance calculations, and provides a simple interface to digitize and streamline traditional record-keeping.",
         repo: "https://github.com/yash-pouranik/PandeyDhudhBhandar",
         live: "https://pandeydudhbhandar.bitbros.in/"
     }
 ];
+
 
 
 // Root route

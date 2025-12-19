@@ -49,9 +49,16 @@
                     </a>
                 <% } %>
                 
-                <a href="<%= project.repo %>" target="_blank" class="view-all-link" style="font-size: 1rem;">
-                    View Source Code
-                </a>
+                <% if(project.slug !== "urbackend") {%>
+                    <a href="<%= project.repo %>" target="_blank" class="view-all-link" style="font-size: 1rem;">
+                        View Source Code
+                    </a>
+                <% } else {%>
+                    <a href="<%= project.repo %>" target="_blank" class="view-all-link" style="font-size: 1rem;">
+                        ! Open Source yet 
+                        coming soon...
+                    </a>
+                <% } %>
             </div>
         </div>
         
