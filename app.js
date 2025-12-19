@@ -19,6 +19,26 @@ const projects = [
         live: "https://urbackend.bitbros.in/"
     },
     {
+        slug: "campusnotes",
+        title: "CampusNotes",
+        year: "2025 - SEPT",  
+        tagline: "notes sharing platform - 42GB+ pdfs Delivered",
+        stats: "750+ Active Users | Node.js, EJS, MongoDB",
+        desc: "CampusNotes is a production-deployed academic notes sharing platform that allows students to upload, verify, and download study materials. It features secure session-based authentication, role-based access control, and an AI assistant for note summarization and contextual chat, while handling real-world traffic and file delivery at scale.",
+        repo: "https://github.com/yash-pouranik/CampusNotes",
+        live: "https://campusnotes.bitbros.in/"
+    },
+    {
+        slug: "nirvirodh",
+        title: "Nirvirodh",
+        year: "2025 - AUG",
+        tagline: "Real-time collaboration tool",
+        stats: "Socket.IO, Node.js, MongoDB",
+        desc: "Nirvirodh is a real-time collaboration platform designed to prevent editing conflicts in team environments. It implements a secure file-locking mechanism using Socket.IO, ensuring that only one user can edit a resource at a time while keeping all collaborators in sync.",
+        repo: "https://github.com/yash-pouranik/nirvirodh",
+        live: "https://nirvirodh.onrender.com"
+    },
+    {
         slug: "edubridge",
         title: "EduBridge Kids",
         year: "2025 - NOV",  
@@ -27,16 +47,6 @@ const projects = [
         desc: "Built for Void Hack 7.0, EduBridge Kids is an offline-first learning management system designed for students in low-connectivity regions. It supports role-based access for students and teachers, progressive web app (PWA) capabilities for offline usage, and a Gemini-powered AI study assistant to help with learning and doubt resolution.",
         repo: "https://github.com/KushagraJaiswar02/EduPlatform",
         live: "https://eduplatform.bitbros.in/"
-    },
-    {
-        slug: "campusnotes",
-        title: "CampusNotes",
-        year: "2025 - SEPT",  
-        tagline: "Academic notes sharing platform",
-        stats: "750+ Active Users | Node.js, EJS, MongoDB",
-        desc: "CampusNotes is a production-deployed academic notes sharing platform that allows students to upload, verify, and download study materials. It features secure session-based authentication, role-based access control, and an AI assistant for note summarization and contextual chat, while handling real-world traffic and file delivery at scale.",
-        repo: "https://github.com/yash-pouranik/CampusNotes",
-        live: "https://campusnotes.bitbros.in/"
     },
     {
         slug: "trekstay",
@@ -57,16 +67,6 @@ const projects = [
         desc: "Built during a 48-hour national hackathon (Solve for India), GullyBazar is a hyperlocal marketplace that connects street food vendors with raw material suppliers. The platform includes secure authentication, vendor and supplier profiles, and a review system to build trust within the local ecosystem.",
         repo: "https://github.com/yash-pouranik/gullybaza-bitbros",
         live: "https://gullybazar.bitbros.in/"
-    },
-    {
-        slug: "nirvirodh",
-        title: "Nirvirodh",
-        year: "2025 - AUG",
-        tagline: "Real-time collaboration tool",
-        stats: "Socket.IO, Node.js, MongoDB",
-        desc: "Nirvirodh is a real-time collaboration platform designed to prevent editing conflicts in team environments. It implements a secure file-locking mechanism using Socket.IO, ensuring that only one user can edit a resource at a time while keeping all collaborators in sync.",
-        repo: "https://github.com/yash-pouranik/nirvirodh",
-        live: "https://nirvirodh.onrender.com"
     },
     {
         slug: "pandey-dhudh-bhandar",
