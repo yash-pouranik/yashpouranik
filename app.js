@@ -13,7 +13,7 @@ const projects = [
         title: "urBackend",
         year: "2025 - DEC",
         tagline: "Instant Backend-as-a-Service (BaaS)",
-        stats: "Node.js, MongoDB, JWT, REST APIs",
+        stats: "Node.js, React, MongoDB, JWT, REST APIs",
         desc: "urBackend is an instant Backend-as-a-Service platform built to help developers quickly set up databases, authentication, and storage without writing backend code. It provides JWT-based authentication, API key access, rate limiting for security, schema validation for data consistency, and a visual dashboard to monitor API usage and traffic.",
         repo: "https://github.com/yash-pouranik/urBackend",
         live: "https://urbackend.bitbros.in/"
